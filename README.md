@@ -64,13 +64,13 @@ A full-featured Job Portal built with the MERN stack where Job Seekers can find 
 ## 📁 Project Structure
 
 job-portal/
-├── backend/
-│   ├── controllers/
-│   │   ├── user.controller.js
-│   │   ├── job.controller.js
-│   │   ├── company.controller.js
-│   │   └── application.controller.js
-│   ├── models/
+-├── backend/
+-│   ├── controllers/
+-│   │   ├── user.controller.js
+-│   │   ├── job.controller.js
+-│   │   ├── company.controller.js
+-│   │   └── application.controller.js
+-│   ├── models/
 │   │   ├── user.model.js
 │   │   ├── job.model.js
 │   │   ├── company.model.js
