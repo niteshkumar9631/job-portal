@@ -62,6 +62,9 @@ A full-featured Job Portal built with the MERN stack where Job Seekers can find 
 ---
 
 ## 📁 Project Structure
+<img width="376" height="725" alt="image" src="https://github.com/user-attachments/assets/4b918eb2-62b0-40ec-a177-b3c6ca6fb73d" />
+<img width="378" height="833" alt="image" src="https://github.com/user-attachments/assets/03cf9438-a490-4e99-bee8-253759c32c12" />
+<img width="337" height="507" alt="image" src="https://github.com/user-attachments/assets/6289945c-4156-4510-998a-3e5d0ffa88fa" />
 
 job-portal/
 -├── backend/
