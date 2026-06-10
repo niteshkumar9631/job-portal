@@ -66,45 +66,6 @@ A full-featured Job Portal built with the MERN stack where Job Seekers can find 
 <img width="378" height="833" alt="image" src="https://github.com/user-attachments/assets/03cf9438-a490-4e99-bee8-253759c32c12" />
 <img width="337" height="507" alt="image" src="https://github.com/user-attachments/assets/6289945c-4156-4510-998a-3e5d0ffa88fa" />
 
-job-portal/
--├── backend/
--│   ├── controllers/
--│   │   ├── user.controller.js
--│   │   ├── job.controller.js
--│   │   ├── company.controller.js
--│   │   └── application.controller.js
--│   ├── models/
-│   │   ├── user.model.js
-│   │   ├── job.model.js
-│   │   ├── company.model.js
-│   │   └── application.model.js
-│   ├── routes/
-│   │   ├── user.route.js
-│   │   ├── job.route.js
-│   │   ├── company.route.js
-│   │   └── application.route.js
-│   ├── middlewares/
-│   │   ├── isAuthenticated.js
-│   │   └── multer.js
-│   ├── utils/
-│   │   ├── cloudinary.js
-│   │   └── datauri.js
-│   └── index.js
-└── frontend/
-└── src/
-├── components/
-│   ├── auth/
-│   ├── recruiter/
-│   ├── shared/
-│   └── ...pages
-├── redux/
-│   ├── store.js
-│   ├── authSlice.js
-│   ├── jobSlice.js
-│   └── applicationSlice.js
-└── utils/
-└── constant.js
-
 ---
 
 ## ⚙️ Local Setup
