@@ -35,6 +35,14 @@ A full-featured Job Portal built with the MERN stack where Job Seekers can find 
 - Toast notifications
 - Fully responsive UI
 
+### 👥 Roles
+
+| Role | Access |
+|------|--------|
+| Student | Search jobs, apply, track status |
+| Recruiter | Post jobs, manage companies, view applicants |
+| Admin | Manage all users, companies, jobs |
+
 ---
 
 ## 🛠️ Tech Stack
