@@ -33,3 +33,10 @@ export const AuthRoute = ({ children }) => {
     }
     return children
 }
+
+export const AdminRoute = ({ children }) => {
+    const { user } = useSelector(store => store.auth)
+    if (!user) return <Navigate to='/login' />
+    if (user.role !== 'admin') return <Navigate to='/' />
+    return children
+}

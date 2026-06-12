@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import axios from 'axios'
 import { setUser } from './redux/authSlice'
 import { USER_API_END_POINT } from './utils/constant'
-import { ProtectedRoute, StudentRoute, RecruiterRoute, AuthRoute } from './components/ProtectedRoute'
+import { ProtectedRoute, StudentRoute, RecruiterRoute, AuthRoute, AdminRoute } from './components/ProtectedRoute'
 import Login from './components/auth/Login'
 import Signup from './components/auth/Signup'
 import Home from './components/Home'
@@ -19,6 +19,10 @@ import RecruiterJobs from './components/recruiter/RecruiterJobs'
 import PostJob from './components/recruiter/PostJob'
 import Applicants from './components/recruiter/Applicants'
 import Dashboard from './components/recruiter/Dashboard'
+import AdminDashboard from './components/admin/AdminDashboard'
+import AdminUsers from './components/admin/AdminUsers'
+import AdminCompanies from './components/admin/AdminCompanies'
+import AdminJobs from './components/admin/AdminJobs'
 
 const appRouter = createBrowserRouter([
     {
@@ -78,6 +82,11 @@ const appRouter = createBrowserRouter([
     path: '/recruiter/dashboard',
     element: <RecruiterRoute><Dashboard /></RecruiterRoute>
 },
+
+{ path: '/admin/dashboard', element: <AdminRoute><AdminDashboard /></AdminRoute> },
+{ path: '/admin/users', element: <AdminRoute><AdminUsers /></AdminRoute> },
+{ path: '/admin/companies', element: <AdminRoute><AdminCompanies /></AdminRoute> },
+{ path: '/admin/jobs', element: <AdminRoute><AdminJobs /></AdminRoute> },
 
 ])
 

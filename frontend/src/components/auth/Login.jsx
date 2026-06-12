@@ -32,7 +32,13 @@ const Login = () => {
             )
             if (res.data.success) {
                 dispatch(setUser(res.data.user))
-                navigate('/')
+                if (res.data.user.role === 'admin') {
+                    navigate('/admin/dashboard')
+                } else if (res.data.user.role === 'recruiter') {
+                    navigate('/recruiter/companies')
+                } else {
+                    navigate('/')
+                }
                 toast.success(res.data.message)
             }
         } catch (error) {
@@ -50,7 +56,6 @@ const Login = () => {
                 </h1>
 
                 <form onSubmit={submitHandler} className='flex flex-col gap-4'>
-
                     <div>
                         <label className='text-sm font-medium text-gray-700'>Email</label>
                         <input
@@ -75,31 +80,29 @@ const Login = () => {
                         />
                     </div>
 
-                    {/* Role */}
                     <div>
                         <label className='text-sm font-medium text-gray-700'>Role</label>
                         <div className='flex gap-6 mt-2'>
                             <label className='flex items-center gap-2 cursor-pointer'>
-                                <input
-                                    type='radio'
-                                    name='role'
-                                    value='student'
+                                <input type='radio' name='role' value='student'
                                     checked={input.role === 'student'}
                                     onChange={changeEventHandler}
-                                    className='accent-purple-600'
-                                />
+                                    className='accent-purple-600' />
                                 <span className='text-sm'>Student</span>
                             </label>
                             <label className='flex items-center gap-2 cursor-pointer'>
-                                <input
-                                    type='radio'
-                                    name='role'
-                                    value='recruiter'
+                                <input type='radio' name='role' value='recruiter'
                                     checked={input.role === 'recruiter'}
                                     onChange={changeEventHandler}
-                                    className='accent-purple-600'
-                                />
+                                    className='accent-purple-600' />
                                 <span className='text-sm'>Recruiter</span>
+                            </label>
+                            <label className='flex items-center gap-2 cursor-pointer'>
+                                <input type='radio' name='role' value='admin'
+                                    checked={input.role === 'admin'}
+                                    onChange={changeEventHandler}
+                                    className='accent-purple-600' />
+                                <span className='text-sm'>Admin</span>
                             </label>
                         </div>
                     </div>
@@ -117,7 +120,6 @@ const Login = () => {
                             Signup
                         </Link>
                     </p>
-
                 </form>
             </div>
         </div>

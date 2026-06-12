@@ -47,7 +47,7 @@ export const login = async (req, res) => {
         if (role !== user.role) {
             return res.status(400).json({ message: 'Account does not exist with this role', success: false })
         }
-        const tokenData = { userId: user._id }
+        const tokenData = { userId: user._id, role: user.role }
         const token = jwt.sign(tokenData, process.env.JWT_SECRET, { expiresIn: '1d' })
         user = {
             _id: user._id,

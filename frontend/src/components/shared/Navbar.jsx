@@ -65,6 +65,27 @@ const Navbar = () => {
                     )}
                 </div>
 
+                {user && user.role === 'admin' && (
+    <>
+        <Link to='/admin/dashboard'
+            className='text-gray-600 hover:text-purple-600 font-medium'>
+            Dashboard
+        </Link>
+        <Link to='/admin/users'
+            className='text-gray-600 hover:text-purple-600 font-medium'>
+            Users
+        </Link>
+        <Link to='/admin/companies'
+            className='text-gray-600 hover:text-purple-600 font-medium'>
+            Companies
+        </Link>
+        <Link to='/admin/jobs'
+            className='text-gray-600 hover:text-purple-600 font-medium'>
+            Jobs
+        </Link>
+    </>
+)}
+
                 {/* Auth Buttons */}
                 <div className='flex items-center gap-4'>
                     {!user ? (
